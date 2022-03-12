@@ -1,0 +1,3 @@
+[submodule "Eerore/vendor/spdlog"]
+	path = Eerore/vendor/spdlog
+	url = https://github.com/gabime/spdlog
