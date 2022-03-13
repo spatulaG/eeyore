@@ -9,3 +9,5 @@
 #else
 	#error Eeyore only supports Windows!
 #endif
+
+#define BIT(x) (1 << x)//shift 1 to left for x bit, see: bit field

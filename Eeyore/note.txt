@@ -1,0 +1,1 @@
+PCH: precompiled header, better for vendor codes(tcl, windows api...) compile then to bin, for faster build time

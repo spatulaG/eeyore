@@ -1,42 +1,48 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Source Files">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    <Filter Include="Eeyore">
+      <UniqueIdentifier>{2EE43AB0-1A86-6586-0341-79DAEF81ECD6}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
-    </Filter>
-    <Filter Include="Resource Files">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    <Filter Include="Eeyore\Events">
+      <UniqueIdentifier>{5250DCCB-BE10-5802-874B-A17FF3CA9CDE}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\Eeyore\Core.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
+    <ClInclude Include="src\Eeyore.h" />
     <ClInclude Include="src\Eeyore\Application.h">
-      <Filter>Header Files</Filter>
+      <Filter>Eeyore</Filter>
     </ClInclude>
-    <ClInclude Include="src\Eeyore.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Eeyore\Log.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="src\Eeyore\Core.h">
+      <Filter>Eeyore</Filter>
     </ClInclude>
     <ClInclude Include="src\Eeyore\EntryPoint.h">
-      <Filter>Header Files</Filter>
+      <Filter>Eeyore</Filter>
     </ClInclude>
+    <ClInclude Include="src\Eeyore\Events\ApplicationEvent.h">
+      <Filter>Eeyore\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Eeyore\Events\Event.h">
+      <Filter>Eeyore\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Eeyore\Events\KeyEvent.h">
+      <Filter>Eeyore\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Eeyore\Events\MouseEvent.h">
+      <Filter>Eeyore\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Eeyore\Log.h">
+      <Filter>Eeyore</Filter>
+    </ClInclude>
+    <ClInclude Include="src\erpch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Eeyore\Application.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Eeyore</Filter>
     </ClCompile>
     <ClCompile Include="src\Eeyore\Log.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Eeyore</Filter>
     </ClCompile>
+    <ClCompile Include="src\erpch.cpp" />
   </ItemGroup>
 </Project>

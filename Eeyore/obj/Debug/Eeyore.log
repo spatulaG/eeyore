@@ -1,0 +1,4 @@
+﻿  Eeyore.vcxproj -> C:\dev\Eeyore\Eeyore\..\bin-int\Debug-windows-x86_64\Eeyore\Eeyore.dll
+  Invalid number of parameters
+C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Common7\IDE\VC\VCTargets\Microsoft.CppCommon.targets(138,5): error MSB3073: The command "Xcopy ../bin-int/Debug-windows-x86_64/Eeyore/Eeyore.dll ..\bin\Debug-windows-x86_64\Eeyore /i /e /Y
+C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Common7\IDE\VC\VCTargets\Microsoft.CppCommon.targets(138,5): error MSB3073: :VCEnd" exited with code 4.

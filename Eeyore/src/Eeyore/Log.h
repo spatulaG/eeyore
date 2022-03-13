@@ -1,7 +1,8 @@
 #pragma once
-#include <memory>
 #include "core.h"
 #include "spdlog/spdlog.h"
+#include "spdlog/fmt/ostr.h"//ostream
+
 namespace Eeyore {
 	class EEYORE_API Log{
 	public:

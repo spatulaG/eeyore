@@ -1,5 +1,7 @@
 #pragma once
 #include "core.h"
+#include "Events/Event.h"
+
 namespace Eeyore {
 	class EEYORE_API Application
 	{
