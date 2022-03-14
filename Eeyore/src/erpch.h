@@ -11,7 +11,6 @@
 #include<unordered_map>
 #include<unordered_set>
 
-
 //precompiled header file
 #ifdef ER_PLATFORM_WINDOWS
 	#include <Windows.h>
