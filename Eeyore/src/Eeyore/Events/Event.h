@@ -43,7 +43,7 @@ namespace Eeyore {
 			return GetCategoryFlags() & category;
 		}
 	protected:
-		bool n_Handled = false;
+		bool m_Handled = false;
 	};
 
 	class EventDispatcher 

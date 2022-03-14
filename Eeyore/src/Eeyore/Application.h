@@ -1,6 +1,7 @@
 #pragma once
 #include "core.h"
 #include "Events/Event.h"
+#include "Events/ApplicationEvent.h"
 #include "Window.h"
 
 namespace Eeyore {
@@ -10,8 +11,11 @@ namespace Eeyore {
 		Application();
 		virtual ~Application();
 
+		void OnEvent(Event& e);
 		void Run();
 	private:
+		bool OnWindowClose(WindowCloseEvent& e);
+
 		std::unique_ptr<Window> m_Window;
 		bool m_Running = true;
 	};

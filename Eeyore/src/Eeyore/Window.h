@@ -23,7 +23,7 @@ namespace Eeyore {
 	class EEYORE_API Window // just an interface, will implement per platform
 	{
 		public:
-			using EventCallbackFn = std::function<void(Event&)>;
+			using EventCallbackFn = std::function<void(Event&)>;// using: set nickname 
 		
 		virtual ~Window() {}
 
