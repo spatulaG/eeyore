@@ -11,6 +11,8 @@
 #include<unordered_map>
 #include<unordered_set>
 
+#include "Eeyore/Log.h"
+
 //precompiled header file
 #ifdef ER_PLATFORM_WINDOWS
 	#include <Windows.h>

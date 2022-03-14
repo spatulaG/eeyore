@@ -1,6 +1,7 @@
 #pragma once
 #include "core.h"
 #include "Events/Event.h"
+#include "Window.h"
 
 namespace Eeyore {
 	class EEYORE_API Application
@@ -10,6 +11,9 @@ namespace Eeyore {
 		virtual ~Application();
 
 		void Run();
+	private:
+		std::unique_ptr<Window> m_Window;
+		bool m_Running = true;
 	};
 	//to be defined in client
 	Application* CreateApplication();

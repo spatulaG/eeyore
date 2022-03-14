@@ -1,6 +1,7 @@
+#include "erpch.h" 
 #include "Log.h"
 #include "spdlog/sinks/stdout_color_sinks.h"
-#include "erpch.h" 
+
 
 namespace Eeyore {
 

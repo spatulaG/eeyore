@@ -10,6 +10,12 @@ workspace "Eeyore"
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
+-- Include directories relative to root folder (solution dir)
+IncludeDir = {}
+IncludeDir["GLFW"] = "Eeyore\\vendor\\GLFW\\include"
+
+include "Eeyore\\vendor\\GLFW"
+
 project "Eeyore"
 	location "Eeyore"
 	kind "SharedLib"
@@ -18,8 +24,8 @@ project "Eeyore"
 	targetdir ("bin\\" ..outputdir .. "\\%{prj.name}") 
 	objdir ("bin-int\\" ..outputdir .. "\\%{prj.name}") 
 
+	pchsource "Eeyore/src/erpch.cpp"
 	pchheader "erpch.h"
-	pchsource "Eeyore\\src\\erpch.cpp"
 
 	files
 	{
@@ -30,7 +36,14 @@ project "Eeyore"
 	includedirs
 	{
 		"%{prj.name}\\vendor\\spdlog\\include",
-		"Eeyore\\src"
+		"%{prj.name}\\src",
+		"%{IncludeDir.GLFW}"
+	}
+
+	links
+	{
+		"GLFW",
+		"opengl32.lib"
 	}
 
 	filter"system:windows"
