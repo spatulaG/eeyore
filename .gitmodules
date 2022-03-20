@@ -5,3 +5,6 @@
 	path = Eeyore/vendor/GLFW
 	url = https://github.com/spatulaG/glfw
 	 
+[submodule "Eeyore/vendor/imgui"]
+	path = Eeyore/vendor/imgui
+	url = https://github.com/spatulaG/imgui

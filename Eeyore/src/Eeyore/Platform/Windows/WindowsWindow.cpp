@@ -1,8 +1,11 @@
 #include "erpch.h"
 #include "WindowsWindow.h"
+
 #include "Eeyore/Events/KeyEvent.h"
 #include "Eeyore/Events/MouseEvent.h"
 #include "Eeyore/Events/ApplicationEvent.h"
+
+#include "glad/glad.h"
 
 namespace Eeyore {
 
@@ -44,6 +47,8 @@ namespace Eeyore {
 
 		m_Window = glfwCreateWindow((int)props.Width, (int)props.Height, m_Data.Title.c_str(), nullptr, nullptr);
 		glfwMakeContextCurrent(m_Window);
+		int status = gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
+		ER_CORE_ASSERT(status, "Failed to initialize glad!");
 		glfwSetWindowUserPointer(m_Window, &m_Data);
 		SetVSync(true);
 		// Set GLFW callbacks

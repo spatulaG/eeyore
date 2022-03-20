@@ -13,8 +13,10 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 -- Include directories relative to root folder (solution dir)
 IncludeDir = {}
 IncludeDir["GLFW"] = "Eeyore\\vendor\\GLFW\\include"
+IncludeDir["Glad"] = "Eeyore\\vendor\\Glad\\include"
 
 include "Eeyore\\vendor\\GLFW"
+include "Eeyore\\vendor\\Glad"
 
 project "Eeyore"
 	location "Eeyore"
@@ -37,12 +39,14 @@ project "Eeyore"
 	{
 		"%{prj.name}\\vendor\\spdlog\\include",
 		"%{prj.name}\\src",
-		"%{IncludeDir.GLFW}"
+		"%{IncludeDir.GLFW}",
+		"%{IncludeDir.Glad}"
 	}
 
 	links
 	{
 		"GLFW",
+		"Glad",
 		"opengl32.lib"
 	}
 
@@ -53,7 +57,8 @@ project "Eeyore"
 
 	defines{
 		"ER_PLATFORM_WINDOWS",
-		"ER_BUILD_DLL"
+		"ER_BUILD_DLL",
+		"GLFW_INCLUDE_NONE" --so it will not include opengl headers, which conflict with glad
 	}
 
 	postbuildcommands
