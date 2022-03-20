@@ -46,6 +46,8 @@
     <ClInclude Include="src\Eeyore\Window.h">
       <Filter>Eeyore</Filter>
     </ClInclude>
+    <ClInclude Include="src\Layer.h" />
+    <ClInclude Include="src\LayerStack.h" />
     <ClInclude Include="src\erpch.h" />
   </ItemGroup>
   <ItemGroup>
@@ -58,6 +60,8 @@
     <ClCompile Include="src\Eeyore\Platform\Windows\WindowsWindow.cpp">
       <Filter>Eeyore\Platform\Windows</Filter>
     </ClCompile>
+    <ClCompile Include="src\Layer.cpp" />
+    <ClCompile Include="src\LayerStack.cpp" />
     <ClCompile Include="src\erpch.cpp" />
   </ItemGroup>
 </Project>

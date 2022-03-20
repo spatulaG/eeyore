@@ -31,8 +31,10 @@ namespace Eeyore {
 #define EVENT_CLASS_CATEGORY(category) virtual int GetCategoryFlags() const override {return category;} // return: bit(n)
 
 	class EEYORE_API Event {
-		friend class EventDispatcher;
 	public:
+
+		bool Handled = false;
+
 		virtual EventType GetEventType() const = 0;
 		virtual const char* GetName() const = 0;
 		virtual int GetCategoryFlags() const = 0;
@@ -42,8 +44,6 @@ namespace Eeyore {
 		{
 			return GetCategoryFlags() & category;
 		}
-	protected:
-		bool m_Handled = false;
 	};
 
 	class EventDispatcher 
@@ -63,7 +63,7 @@ namespace Eeyore {
 			// Check what eventtype are we trying to dispatch, if it matches the template
 			if (m_Event.GetEventType() == T::GetStaticType())
 			{
-				m_Event.m_Handled = func(*(T*)&m_Event);
+				m_Event.Handled = func(*(T*)&m_Event);
 				return true;
 			}
 			return false;

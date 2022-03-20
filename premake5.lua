@@ -63,14 +63,17 @@ project "Eeyore"
 
 	filter "configurations:Debug"
 		defines "ER_DEBUG"
+		buildoptions "/MDd" -- Multi threaded debug, so not static alloc
 		symbols "On"
 	
 	filter "configurations:Release"
 		defines "ER_RELEASE"
+		buildoptions "/MD"
 		optimize "On"
 
 	filter "configurations:Dist"
 		defines "ER_DIST"
+		buildoptions "/MD"
 		optimize "On"
 
 project "Sandbox"
@@ -110,12 +113,15 @@ project "Sandbox"
 
 	filter "configurations:Debug"
 		defines "ER_DEBUG"
+		buildoptions "/MDd"--why?
 		symbols "On"
 	
 	filter "configurations:Release"
 		defines "ER_RELEASE"
+		buildoptions "/MD"
 		optimize "On"
 
 	filter "configurations:Dist"
 		defines "ER_DIST"
+		buildoptions "/MD"
 		optimize "On"
