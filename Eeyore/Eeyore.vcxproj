@@ -81,7 +81,7 @@
       <PrecompiledHeaderFile>erpch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>ER_PLATFORM_WINDOWS;ER_BUILD_DLL;GLFW_INCLUDE_NONE;ER_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>vendor\spdlog\include;src;vendor\GLFW\include;vendor\Glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>vendor\spdlog\include;src;vendor\GLFW\include;vendor\Glad\include;vendor\imgui\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
@@ -104,7 +104,7 @@
       <PrecompiledHeaderFile>erpch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>ER_PLATFORM_WINDOWS;ER_BUILD_DLL;GLFW_INCLUDE_NONE;ER_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>vendor\spdlog\include;src;vendor\GLFW\include;vendor\Glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>vendor\spdlog\include;src;vendor\GLFW\include;vendor\Glad\include;vendor\imgui\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -131,7 +131,7 @@
       <PrecompiledHeaderFile>erpch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>ER_PLATFORM_WINDOWS;ER_BUILD_DLL;GLFW_INCLUDE_NONE;ER_DIST;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>vendor\spdlog\include;src;vendor\GLFW\include;vendor\Glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>vendor\spdlog\include;src;vendor\GLFW\include;vendor\Glad\include;vendor\imgui\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -162,18 +162,18 @@
     <ClInclude Include="src\Eeyore\Events\KeyEvent.h" />
     <ClInclude Include="src\Eeyore\Events\MouseEvent.h" />
     <ClInclude Include="src\Eeyore\Log.h" />
-    <ClInclude Include="src\Eeyore\Platform\Windows\WindowsWindow.h" />
+    <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
     <ClInclude Include="src\Eeyore\Window.h" />
-    <ClInclude Include="src\Layer.h" />
-    <ClInclude Include="src\LayerStack.h" />
+    <ClInclude Include="src\Eeyore\Layer.h" />
+    <ClInclude Include="src\Eeyore\LayerStack.h" />
     <ClInclude Include="src\erpch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Eeyore\Application.cpp" />
     <ClCompile Include="src\Eeyore\Log.cpp" />
-    <ClCompile Include="src\Eeyore\Platform\Windows\WindowsWindow.cpp" />
-    <ClCompile Include="src\Layer.cpp" />
-    <ClCompile Include="src\LayerStack.cpp" />
+    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
+    <ClCompile Include="src\Eeyore\Layer.cpp" />
+    <ClCompile Include="src\Eeyore\LayerStack.cpp" />
     <ClCompile Include="src\erpch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
     </ClCompile>
@@ -184,6 +184,9 @@
     </ProjectReference>
     <ProjectReference Include="vendor\Glad\Glad.vcxproj">
       <Project>{BDD6857C-A90D-870D-52FA-6C103E10030F}</Project>
+    </ProjectReference>
+    <ProjectReference Include="vendor\imgui\ImGui.vcxproj">
+      <Project>{C0FF640D-2C14-8DBE-F595-301E616989EF}</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

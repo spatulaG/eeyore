@@ -5,7 +5,7 @@
 #include "Eeyore/Events/MouseEvent.h"
 #include "Eeyore/Events/ApplicationEvent.h"
 
-#include "glad/glad.h"
+#include "Glad/glad.h"
 
 namespace Eeyore {
 
