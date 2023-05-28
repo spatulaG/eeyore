@@ -3,6 +3,8 @@
 #include "Eeyore/Application.h"
 #include "Eeyore/Layer.h"
 #include "Eeyore/Log.h"
+
+#include "Eeyore/ImGui/ImGuiLayer.h"
 //---Entry Point--------------------------------
 #include "Eeyore/EntryPoint.h"
 //---Entry Point--------------------------------

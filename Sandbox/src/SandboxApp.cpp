@@ -1,7 +1,4 @@
-#include "erpch.h" 
 #include "Eeyore.h"
-
-
 
 class ExampleLayer : public Eeyore::Layer {
 public:
@@ -26,6 +23,7 @@ class Sandbox : public Eeyore::Application
 public:
 	Sandbox() {
 		PushLayer(new ExampleLayer());
+		PushOverlay(new Eeyore::ImGuiLayer());
 	}
 	~Sandbox() {
 	}

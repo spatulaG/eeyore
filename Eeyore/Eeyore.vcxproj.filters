@@ -7,8 +7,14 @@
     <Filter Include="Eeyore\Events">
       <UniqueIdentifier>{5250DCCB-BE10-5802-874B-A17FF3CA9CDE}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Eeyore\ImGui">
+      <UniqueIdentifier>{D843D599-C4A6-643E-6D2C-9DF4596E30C1}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Platform">
       <UniqueIdentifier>{2AC788B4-1694-E3BF-3FAD-D1672BD9184E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform\OpenGL">
+      <UniqueIdentifier>{1E7D2C1D-8A08-9AE1-9319-1DD6FF23F6E1}</UniqueIdentifier>
     </Filter>
     <Filter Include="Platform\Windows">
       <UniqueIdentifier>{64FBD71A-50F4-F66C-7926-DCF1657ED678}</UniqueIdentifier>
@@ -37,6 +43,9 @@
     <ClInclude Include="src\Eeyore\Events\MouseEvent.h">
       <Filter>Eeyore\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\Eeyore\ImGui\ImGuiLayer.h">
+      <Filter>Eeyore\ImGui</Filter>
+    </ClInclude>
     <ClInclude Include="src\Eeyore\Layer.h">
       <Filter>Eeyore</Filter>
     </ClInclude>
@@ -49,6 +58,9 @@
     <ClInclude Include="src\Eeyore\Window.h">
       <Filter>Eeyore</Filter>
     </ClInclude>
+    <ClInclude Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.h">
+      <Filter>Platform\OpenGL</Filter>
+    </ClInclude>
     <ClInclude Include="src\Platform\Windows\WindowsWindow.h">
       <Filter>Platform\Windows</Filter>
     </ClInclude>
@@ -58,6 +70,9 @@
     <ClCompile Include="src\Eeyore\Application.cpp">
       <Filter>Eeyore</Filter>
     </ClCompile>
+    <ClCompile Include="src\Eeyore\ImGui\ImGuiLayer.cpp">
+      <Filter>Eeyore\ImGui</Filter>
+    </ClCompile>
     <ClCompile Include="src\Eeyore\Layer.cpp">
       <Filter>Eeyore</Filter>
     </ClCompile>
@@ -66,6 +81,9 @@
     </ClCompile>
     <ClCompile Include="src\Eeyore\Log.cpp">
       <Filter>Eeyore</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.cpp">
+      <Filter>Platform\OpenGL</Filter>
     </ClCompile>
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp">
       <Filter>Platform\Windows</Filter>
